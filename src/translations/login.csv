@@ -15,7 +15,7 @@ login.codeSubmissionError,The error that appears when the user entered sms code 
 login.fieldMissing,The error if user doesn't fill all the field,Enter your username and password,Nom d'utilisateur/mot de passe requis
 login.forbiddenCredentialError,The error that appears when the user entered details are forbidden,User is currently deactivated,L'utilisateur est actuellement désactivé.
 login.forgotPassword,The label that appears on the Forgot password button,Can't login?,Vous ne pouvez pas vous connecter ?
-login.language,Language name,"{language, select, en {English} fr {Français} other {{language}}}","{language, select, en {English} fr {Français} other {{language}}}"
+login.language,Language name,"{language, select, en {English} fr {Français} ta {tamil} other {{language}}}","{language, select, en {English} fr {Français} ta {tamil} other {{language}}}"
 login.manager.performanceAppDescription,,Analyse the performance of a particular area of your country in it's Civil Registration.,Analysez les performances d'une région particulière de votre pays en matière d'enregistrement des faits d'état civil.
 login.manager.performanceAppTitle,,Performance Management,Gestion des performances
 login.manager.registerAppDescription,,"Manage declarations, registrations and certifications here.","Gérez ici vos déclarations, enregistrements et certifications."
