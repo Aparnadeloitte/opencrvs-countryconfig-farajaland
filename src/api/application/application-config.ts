@@ -1,21 +1,21 @@
 import { countryLogo } from '@countryconfig/api/application/country-logo'
 
 export const applicationConfig = {
-  APPLICATION_NAME: 'Farajaland CRS',
+  APPLICATION_NAME: 'INDIA CRS',
   BIRTH: {
     REGISTRATION_TARGET: 30,
     LATE_REGISTRATION_TARGET: 365,
     FEE: {
       ON_TIME: 0,
-      LATE: 5.5,
+      LATE: 5,
       DELAYED: 15
     },
     PRINT_IN_ADVANCE: true
   },
   COUNTRY_LOGO: countryLogo,
   CURRENCY: {
-    languagesAndCountry: ['en-US'],
-    isoCode: 'USD'
+    languagesAndCountry: ['en-IND'],
+    isoCode: 'INR'
   },
   DEATH: {
     REGISTRATION_TARGET: 45,
