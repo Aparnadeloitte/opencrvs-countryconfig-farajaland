@@ -1,5 +1,5 @@
 admin2Name_en,admin2Name_alias,admin2Pcode,admin1Name_en,admin1Name_alias,admin1Pcode,admin0Name_en,admin0Name_alias,admin0Pcode
-TamilNadu,TN,600001-699999,SouthIndia,South,IND023,India,IND,IND
-AndhraPradesh,AP,500001-534999,SouthIndia,South,IND001,India,IND,IND
-Karnataka,KA,560001-590999,SouthIndia,South,IND011,India,IND,IND
-Kerala,KL,670001-695999,SouthIndia,South,IND012,India,IND,IND
+TamilNadu,TN,600001,SouthIndia,South,IND023,India,IND,IND
+AndhraPradesh,AP,500001,SouthIndia,South,IND001,India,IND,IND
+Karnataka,KA,560001,SouthIndia,South,IND011,India,IND,IND
+Kerala,KL,670001,SouthIndia,South,IND012,India,IND,IND
