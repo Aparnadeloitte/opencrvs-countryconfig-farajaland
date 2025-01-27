@@ -1,13 +1,12 @@
-primaryOfficeId,givenNames,familyName,systemRole,role,mobile,username,email,password
-CRVS_OFFICE_JEhYJ82xRI,Ravi,Kumar,LOCAL_SYSTEM_ADMIN,Local System Admin,+8765432101,r.kumar,ravi.kumar17@gmail.com,test
-CRVS_OFFICE_JEhYJ82xRI,Anjali,Verma,REGISTRATION_AGENT,Registration Agent,+7654321098,a.verma,anjali.verma17@gmail.com,test
-CRVS_OFFICE_JEhYJ82xRI,Suresh,Patil,LOCAL_REGISTRAR,Local Registrar,+6543210987,s.patil,suresh.patil17@gmail.com,test
-CRVS_OFFICE_JWMRGwDBXK,Pooja,Rao,FIELD_AGENT,Social Worker,+5432109876,p.rao,pooja.rao17@gmail.com,test
-CRVS_OFFICE_JWMRGwDBXK,Rajesh,Gupta,REGISTRATION_AGENT,Registration Agent,+4321098765,r.gupta,rajesh.gupta17@gmail.com,test
-CRVS_OFFICE_JWMRGwDBXK,Vinod,Mehta,LOCAL_REGISTRAR,Local Registrar,+3210987654,v.mehta,vinod.mehta17@gmail.com,test
-CRVS_OFFICE_Q4Fh1JZn6cP,Lakshmi,Menon,LOCAL_SYSTEM_ADMIN,Local System Admin,+2109876543,l.menon,lakshmi.menon17@gmail.com,test
-CRVS_OFFICE_Q4Fh1JZn6cP,Harish,Krishna,FIELD_AGENT,Social Worker,+1098765432,h.krishna,harish.krishna17@gmail.com,test
-CRVS_OFFICE_Q4Fh1JZn6cP,Sindhu,Reddy,REGISTRATION_AGENT,Registration Agent,+0987654321,s.reddy,sindhu.reddy17@gmail.com,test
-CRVS_OFFICE_R9gYvU6D5aD,Mahesh,Das,LOCAL_REGISTRAR,Local Registrar,+9876543219,m.das,mahesh.das17@gmail.com,test
-CRVS_OFFICE_R9gYvU6D5aD,Geeta,Nair,FIELD_AGENT,Social Worker,+8765432109,g.nair,geeta.nair17@gmail.com,test
-CRVS_OFFICE_R9gYvU6D5aD,Rakesh,Prasad,REGISTRATION_AGENT,Registration Agent,+7654321098,r.prasad,rakesh.prasad17@gmail.com,test
+primaryOfficeId,givenNames,familyName,role,mobile,username,email,password
+CRVS_OFFICE_JEhYJ82xRI,Kalusha,Bwalya,SOCIAL_WORKER,+8765432101,k.bwalya,kalushabwalya17@gmail.com,test
+CRVS_OFFICE_JEhYJ82xRI,Felix,Katongo,REGISTRATION_AGENT,+7654321098,f.katongo,kalushabwalya17+@gmail.com,test
+CRVS_OFFICE_JEhYJ82xRI,Kennedy,Mweene,LOCAL_REGISTRAR,+6543210987,k.mweene,kalushabwalya1.7@gmail.com,test
+CRVS_OFFICE_JWMRGwDBXK,Emmanuel,Mayuka,LOCAL_SYSTEM_ADMIN,+4321098765,e.mayuka,kalushabwalya.17@gmail.com,test
+CRVS_OFFICE_JWMRGwDBXK,Jonathan,Campbell,NATIONAL_SYSTEM_ADMIN,+4321098761,j.campbell,kalushabwaly.a17@gmail.com,test
+CRVS_OFFICE_JWMRGwDBXK,Patrick,Gondwe,LOCAL_LEADER,+4321098765,p.gondwe,kalushabwal.ya17@gmail.com,test
+CRVS_OFFICE_Q4Fh1JZn6cP,Joshua,Mutale,REGISTRATION_AGENT,+4321098765,j.mutale,kalushabwa.lya17@gmail.com,test
+CRVS_OFFICE_Q4Fh1JZn6cP,Derrick,Bulaya,LOCAL_REGISTRAR,+4321098765,d.bulaya,kalushabw.alya17@gmail.com,test
+CRVS_OFFICE_Q4Fh1JZn6cP,Alex,Ngonga,LOCAL_SYSTEM_ADMIN,+4321098765,a.ngonga,kalushab.walya17@gmail.com,test
+CRVS_OFFICE_R9gYvU6D5aD,Edgar,Kazembe,PERFORMANCE_MANAGER,+4321098765,e.kazembe,kalusha.bwalya17@gmail.com,test
+CRVS_OFFICE_R9gYvU6D5aD,Joseph,Musonda,NATIONAL_REGISTRAR,+4321098765,j.musonda,kalush.abwalya17@gmail.com,test
