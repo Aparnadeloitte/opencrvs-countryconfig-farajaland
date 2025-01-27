@@ -1,6 +1,5 @@
 id,name,partOf,locationType
-2OKicPQMNI,National CRVS Office,Location/IND,CRVS_OFFICE
-JEhYJ82xRI,Andhra Pradesh CRVS Office,Location/IND001,CRVS_OFFICE
-JWMRGwDBXK,Karnataka CRVS Office,Location/IND011,CRVS_OFFICE
+JEhYJ82xRIAP,Andhra Pradesh CRVS Office,Location/IND001,CRVS_OFFICE
+JWMRGwDBXKKA,Karnataka CRVS Office,Location/IND011,CRVS_OFFICE
 Q4Fh1JZn6cP,Tamil Nadu CRVS Office,Location/IND023,CRVS_OFFICE
 R9gYvU6D5aD,Kerala CRVS Office,Location/IND012,CRVS_OFFICE
