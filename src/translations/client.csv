@@ -1184,7 +1184,7 @@ form.field.label.socialSecurityNumber,,Social security no./NAPSA,N° de sécurit
 form.field.label.someoneElse,Other Label,Someone else,Quelqu'un d'autre
 form.field.label.someoneElseCollector,,Print and issue to someone else,Imprimer et remettre à quelqu'un d'autre
 form.field.label.spouseDetailsExist,,Spouse's details are not available,Pas d'information sur le conjoint
-form.field.label.state,Label for State,Province,Province
+form.field.label.state,Label for State,state,Province
 form.field.label.totalFees,Label for input Reason for Change,,
 form.field.label.typeOfDocument,,Choose type of supporting document,Choisissez le type de document
 form.field.label.typeOfId,,Type of ID,Type d'identification
