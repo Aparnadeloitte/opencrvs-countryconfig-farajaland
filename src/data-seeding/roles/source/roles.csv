@@ -1,13 +1,12 @@
-systemRole,label_en,label_ta
-FIELD_AGENT,Field Agent,களப் பிரதிநிதி
-FIELD_AGENT,Police Officer,காவல் அதிகாரி
-FIELD_AGENT,Social Worker,சமூக பணியாளர்
-FIELD_AGENT,Healthcare Worker,சுகாதார ஊழியர்
-FIELD_AGENT,Local Leader,உள்ளூர் தலைவர்
-REGISTRATION_AGENT,Registration Agent,பதிவாளர் முகவர்
-LOCAL_REGISTRAR,Local Registrar,உள்ளூர் பதிவாளர்
-LOCAL_SYSTEM_ADMIN,Local System Admin,உள்ளூர் முறைமை நிர்வாகி
-NATIONAL_SYSTEM_ADMIN,National System Admin,தேசிய முறைமை நிர்வாகி
-PERFORMANCE_MANAGEMENT,Performance Manager,செயல்திறன் மேலாளர்
-NATIONAL_REGISTRAR,National Registrar,தேசிய பதிவாளர்
+systemRole,label_en,label_fr,label_ta
+FIELD_AGENT,Police Officer,Officier de police,காவல் அதிகாரி
+FIELD_AGENT,Social Worker,Travailleur social,சமூக பணியாளர்
+FIELD_AGENT,Healthcare Worker,Personnel de santé,சுகாதார ஊழியர்
+FIELD_AGENT,Local Leader,Leader local,உள்ளூர் தலைவர்
+REGISTRATION_AGENT,Registration Agent,Agent d'enregistrement,பதிவாளர் முகவர்
+LOCAL_REGISTRAR,Local Registrar,Registraire local,உள்ளூர் பதிவாளர்
+LOCAL_SYSTEM_ADMIN,Local System Admin,Administrateur système local,உள்ளூர் முறைமை நிர்வாகி
+NATIONAL_SYSTEM_ADMIN,National System Admin,Administrateur système national,தேசிய முறைமை நிர்வாகி
+PERFORMANCE_MANAGEMENT,Performance Manager,Gestion des performances,செயல்திறன் மேலாளர்
+NATIONAL_REGISTRAR,National Registrar,Registraire national,தேசிய பதிவாளர்
 
