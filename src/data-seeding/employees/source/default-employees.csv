@@ -1,12 +1,4 @@
-primaryOfficeId,givenNames,familyName,systemRole,role,mobile,username,email,password
-CRVS_OFFICE_JEhYJ82xRIAP,Kalusha,Bwalya,FIELD_AGENT,SOCIAL_WORKER,+260911111111,k.bwalya,kalushabwalya17@gmail.com,test
-CRVS_OFFICE_JEhYJ82xRIAP,Felix,Katongo,REGISTRATION_AGENT,REGISTRATION_AGENT,+260922222222,f.katongo,kalushabwalya17+@gmail.com,test
-CRVS_OFFICE_JEhYJ82xRIAP,Kennedy,Mweene,LOCAL_REGISTRAR,LOCAL_REGISTRAR,+260933333333,k.mweene,kalushabwalya1.7@gmail.com,test
-CRVS_OFFICE_JWMRGwDBXKKA,Emmanuel,Mayuka,LOCAL_SYSTEM_ADMIN,LOCAL_SYSTEM_ADMIN,+260921681112,e.mayuka,kalushabwalya.17@gmail.com,test
-CRVS_OFFICE_JWMRGwDBXKKA,Jonathan,Campbell,NATIONAL_SYSTEM_ADMIN,NATIONAL_SYSTEM_ADMIN,+260921111111,j.campbell,kalushabwaly.a17@gmail.com,test
-CRVS_OFFICE_JWMRGwDBXKKA,Patrick,Gondwe,FIELD_AGENT,LOCAL_LEADER,+260912121212,p.gondwe,kalushabwal.ya17@gmail.com,test
-CRVS_OFFICE_Q4Fh1JZn6cP,Joshua,Mutale,REGISTRATION_AGENT,REGISTRATION_AGENT,+260923232323,j.mutale,kalushabwa.lya17@gmail.com,test
-CRVS_OFFICE_Q4Fh1JZn6cP,Derrick,Bulaya,LOCAL_REGISTRAR,LOCAL_REGISTRAR,+260934343434,d.bulaya,kalushabw.alya17@gmail.com,test
-CRVS_OFFICE_Q4Fh1JZn6cP,Alex,Ngonga,LOCAL_SYSTEM_ADMIN,LOCAL_SYSTEM_ADMIN,+260978787878,a.ngonga,kalushab.walya17@gmail.com,test
-CRVS_OFFICE_R9gYvU6D5aD,Edgar,Kazembe,PERFORMANCE_MANAGEMENT,PERFORMANCE_MANAGEMENT,+260977777777,e.kazembe,kalusha.bwalya17@gmail.com,test
-CRVS_OFFICE_R9gYvU6D5aD,Joseph,Musonda,NATIONAL_REGISTRAR,NATIONAL_REGISTRAR,+260915151515,j.musonda,kalush.abwalya17@gmail.com,test
+primaryOfficeId,givenNames,familyName,role,mobile,username,email,password
+CRVS_OFFICE_Q4Fh1JZn6cP,Joshua,Mutale,REGISTRATION_AGENT,+260923232323,j.mutale,kalushabwa.lya17@gmail.com,test
+CRVS_OFFICE_Q4Fh1JZn6cP,Derrick,Bulaya,LOCAL_REGISTRAR,+260934343434,d.bulaya,kalushabw.alya17@gmail.com,test
+CRVS_OFFICE_Q4Fh1JZn6cP,Alex,Ngonga,LOCAL_SYSTEM_ADMIN,+260978787878,a.ngonga,kalushab.walya17@gmail.com,test
