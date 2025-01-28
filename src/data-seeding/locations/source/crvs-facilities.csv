@@ -1,5 +1,3 @@
 id,name,partOf,locationType
-JEhYJ82xRIAP,Andhra Pradesh CRVS Office,Location/IND001,CRVS_OFFICE
-JWMRGwDBXKKA,Karnataka CRVS Office,Location/IND011,CRVS_OFFICE
-Q4Fh1JZn6cP,Tamil Nadu CRVS Office,Location/IND023,CRVS_OFFICE
-R9gYvU6D5aD,Kerala CRVS Office,Location/IND012,CRVS_OFFICE
+Q4Fh1JZn6cP,HQ Office,Location/600001,CRVS_OFFICE
+Q4Fh1JZn6cP,Tamil Nadu CRVS Office,Location/600001,CRVS_OFFICE
