@@ -17,7 +17,7 @@ export const introduction = defineFormPage({
   title: {
     defaultMessage: 'Introduce the birth registration process to the informant',
     description: 'Event information title for the birth',
-    id: 'v2.register.eventInfo.birth.title'
+    id: 'register.eventInfo.birth.title'
   },
   fields: [
     {
