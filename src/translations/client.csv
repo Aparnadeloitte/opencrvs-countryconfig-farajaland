@@ -2292,7 +2292,9 @@ user.profile.sectionTitle.audit,Title for audit section,History
 user.profile.startDate,Title for startDate field,Start date
 user.profile.userName,Title for userName field,Username
 userRole.fieldAgent,Name for user role Field Agent,Field Agent
+userRole.healthAdministrator,Name for user role Health Administrator,Health Administrator
 userRole.healthcareWorker,Name for user role Healthcare Worker,Healthcare Worker
+userRole.islandHealthAdministrator,Name for user role Island Health Administrator,Island Health Administrator
 userRole.localLeader,Name for user role Local Leader,Local Leader
 userRole.localRegistrar,Name for user role Local Registrar,Local Registrar
 userRole.localSystemAdmin,Name for user role Local System Admin,Local System Admin

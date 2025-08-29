@@ -9,85 +9,43 @@ type Role = {
 
 export const roles: Role[] = [
   {
-    id: 'FIELD_AGENT',
+    id: 'HEALTH_ADMINISTRATOR',
     label: {
-      defaultMessage: 'Field Agent',
-      description: 'Name for user role Field Agent',
-      id: 'userRole.fieldAgent'
+      defaultMessage: 'Health Administrator',
+      description: 'Name for user role Health Administrator',
+      id: 'userRole.healthAdministrator'
     },
     scopes: [
       SCOPES.RECORD_DECLARE_BIRTH,
       SCOPES.RECORD_DECLARE_DEATH,
-      SCOPES.RECORD_DECLARE_MARRIAGE,
+      // TODO: stillbirth scope when stillbirth declaration is added
       SCOPES.RECORD_SUBMIT_INCOMPLETE,
       SCOPES.RECORD_SUBMIT_FOR_REVIEW,
       SCOPES.SEARCH_BIRTH,
       SCOPES.SEARCH_DEATH,
-      SCOPES.SEARCH_MARRIAGE,
-      'search[event=v2.birth,access=all]',
-      'search[event=v2.death,access=my-jurisdiction]',
-      'workqueue[id=assigned-to-you|recent|requires-updates-self|sent-for-review]'
-    ]
-  },
-  {
-    id: 'POLICE_OFFICER',
-    label: {
-      defaultMessage: 'Police Officer',
-      description: 'Name for user role Police Officer',
-      id: 'userRole.policeOfficer'
-    },
-    scopes: [
-      SCOPES.RECORD_DECLARE_BIRTH,
-      SCOPES.RECORD_DECLARE_DEATH,
-      SCOPES.RECORD_DECLARE_MARRIAGE,
-      SCOPES.RECORD_SUBMIT_INCOMPLETE,
-      SCOPES.RECORD_SUBMIT_FOR_REVIEW,
-      SCOPES.SEARCH_BIRTH,
-      SCOPES.SEARCH_DEATH,
-      SCOPES.SEARCH_MARRIAGE,
-      'search[event=v2.birth,access=all]',
-      'search[event=v2.death,access=all]'
-    ]
-  },
-  {
-    id: 'SOCIAL_WORKER',
-    label: {
-      defaultMessage: 'Social Worker',
-      description: 'Name for user role Social Worker',
-      id: 'userRole.socialWorker'
-    },
-    scopes: [
-      SCOPES.RECORD_DECLARE_BIRTH,
-      SCOPES.RECORD_DECLARE_DEATH,
-      SCOPES.RECORD_DECLARE_MARRIAGE,
-      SCOPES.RECORD_SUBMIT_INCOMPLETE,
-      SCOPES.RECORD_SUBMIT_FOR_REVIEW,
-      SCOPES.SEARCH_BIRTH,
-      SCOPES.SEARCH_DEATH,
-      SCOPES.SEARCH_MARRIAGE,
+      SCOPES.USER_READ_MY_OFFICE,
+      SCOPES.USER_READ_ONLY_MY_AUDIT,
+      // TODO: stillbirth search scope when stillbirth declaration is added
       'search[event=v2.birth,access=all]',
       'search[event=v2.death,access=all]',
       'workqueue[id=assigned-to-you|recent|requires-updates-self|sent-for-review]'
     ]
   },
   {
-    id: 'HEALTHCARE_WORKER',
+    id: 'ISLAND_HEALTH_ADMINISTRATOR',
     label: {
-      defaultMessage: 'Healthcare Worker',
-      description: 'Name for user role Healthcare Worker',
-      id: 'userRole.healthcareWorker'
+      defaultMessage: 'Island Health Administrator',
+      description: 'Name for user role Island Health Administrator',
+      id: 'userRole.islandHealthAdministrator'
     },
     scopes: [
-      SCOPES.RECORD_DECLARE_BIRTH,
-      SCOPES.RECORD_DECLARE_DEATH,
-      SCOPES.RECORD_DECLARE_MARRIAGE,
       SCOPES.RECORD_SUBMIT_INCOMPLETE,
       SCOPES.RECORD_SUBMIT_FOR_REVIEW,
-      SCOPES.SEARCH_BIRTH,
-      SCOPES.SEARCH_DEATH,
-      SCOPES.SEARCH_MARRIAGE,
-      'search[event=v2.birth,access=all]',
-      'search[event=v2.death,access=all]'
+      SCOPES.RECORD_DECLARE_BIRTH,
+      SCOPES.RECORD_DECLARE_DEATH,
+      'search[event=v2.birth,access=my-jurisdiction]',
+      'search[event=v2.death,access=my-jurisdiction]',
+      'workqueue[id=assigned-to-you|recent|requires-updates-self|sent-for-review]'
     ]
   },
   {
