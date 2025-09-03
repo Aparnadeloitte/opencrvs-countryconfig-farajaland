@@ -41,8 +41,6 @@ export const roles: Role[] = [
     scopes: [
       SCOPES.RECORD_SUBMIT_INCOMPLETE,
       SCOPES.RECORD_SUBMIT_FOR_REVIEW,
-      SCOPES.RECORD_DECLARE_BIRTH,
-      SCOPES.RECORD_DECLARE_DEATH,
       'search[event=v2.birth,access=my-jurisdiction]',
       'search[event=v2.death,access=my-jurisdiction]',
       'workqueue[id=assigned-to-you|recent|requires-updates-self|sent-for-review]'
