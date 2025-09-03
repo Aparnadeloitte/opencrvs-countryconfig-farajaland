@@ -67,17 +67,19 @@ export const roles: Role[] = [
     ]
   },
   {
-    id: 'REGISTRATION_AGENT',
+    id: 'REGISTRATION_OFFICER',
     label: {
-      defaultMessage: 'Registration Agent',
-      description: 'Name for user role Registration Agent',
-      id: 'userRole.registrationAgent'
+      defaultMessage: 'Registration Officer',
+      description: 'Name for user role Registration Officer',
+      id: 'userRole.registrationOfficer'
     },
     scopes: [
-      SCOPES.RECORD_READ,
+      // SCOPES.RECORD_READ,
       SCOPES.RECORD_DECLARE_BIRTH,
       SCOPES.RECORD_DECLARE_DEATH,
       SCOPES.RECORD_DECLARE_MARRIAGE,
+      // SCOPES.RECORD_DECLARE_DIVORCE,
+      // SCOPES.RECORD_DECLARE_NAMECHANGE,
       SCOPES.RECORD_DECLARATION_EDIT,
       SCOPES.RECORD_SUBMIT_FOR_APPROVAL,
       SCOPES.RECORD_SUBMIT_FOR_UPDATES,
@@ -85,33 +87,36 @@ export const roles: Role[] = [
       SCOPES.RECORD_DECLARATION_REINSTATE,
       SCOPES.RECORD_REGISTRATION_REQUEST_CORRECTION,
       SCOPES.RECORD_PRINT_RECORDS_SUPPORTING_DOCUMENTS,
-      SCOPES.RECORD_EXPORT_RECORDS,
       SCOPES.RECORD_PRINT_ISSUE_CERTIFIED_COPIES,
       SCOPES.PERFORMANCE_READ,
       SCOPES.PERFORMANCE_READ_DASHBOARDS,
-      SCOPES.ORGANISATION_READ_LOCATIONS_MY_OFFICE,
+      SCOPES.ORGANISATION_READ_LOCATIONS_MY_JURISDICTION,
       SCOPES.USER_READ_ONLY_MY_AUDIT,
       SCOPES.SEARCH_BIRTH,
       SCOPES.SEARCH_DEATH,
+      // SCOPES.SEARCH_STIllBIRTH,
       SCOPES.SEARCH_MARRIAGE,
-      'search[event=v2.birth,access=all]',
-      'search[event=v2.death,access=all]',
+      // SCOPES.SEARCH_DIVORCE,
+      // SCOPES.SEARCH_ADOPTION,
+      'search[event=v2.birth,access=my-jurisdiction]',
+      'search[event=v2.death,access=my-jurisdiction]',
       'workqueue[id=assigned-to-you|recent|requires-completion|requires-updates-office|in-review|sent-for-approval|in-external-validation|ready-to-print|ready-to-issue]'
     ]
   },
   {
-    id: 'LOCAL_REGISTRAR',
+    id: 'ISLAND_DEPUTY_REGISTRAR',
     label: {
-      defaultMessage: 'Local Registrar',
-      description: 'Name for user role Local Registrar',
-      id: 'userRole.localRegistrar'
+      defaultMessage: 'Island Deputy Registrar',
+      description: 'Name for user role Island Deputy Registrar',
+      id: 'userRole.IslandDeputyRegistrar'
     },
     scopes: [
-      SCOPES.RECORD_READ,
+      // SCOPES.RECORD_READ,
       SCOPES.RECORD_DECLARE_BIRTH,
       SCOPES.RECORD_DECLARE_DEATH,
       SCOPES.RECORD_DECLARE_MARRIAGE,
       SCOPES.RECORD_DECLARATION_EDIT,
+      SCOPES.RECORD_UNASSIGN_OTHERS,
       SCOPES.RECORD_SUBMIT_FOR_UPDATES,
       SCOPES.RECORD_REVIEW_DUPLICATES,
       SCOPES.RECORD_DECLARATION_ARCHIVE,
@@ -126,14 +131,19 @@ export const roles: Role[] = [
       SCOPES.RECORD_REJECT_REGISTRATION,
       SCOPES.PERFORMANCE_READ,
       SCOPES.PERFORMANCE_READ_DASHBOARDS,
+      SCOPES.PERFORMANCE_EXPORT_VITAL_STATISTICS,
       SCOPES.PROFILE_ELECTRONIC_SIGNATURE,
-      SCOPES.USER_READ_ONLY_MY_AUDIT,
-      SCOPES.ORGANISATION_READ_LOCATIONS_MY_OFFICE,
+      SCOPES.USER_READ_MY_OFFICE,
+      SCOPES.ORGANISATION_READ_LOCATIONS_MY_JURISDICTION,
       SCOPES.SEARCH_BIRTH,
       SCOPES.SEARCH_DEATH,
       SCOPES.SEARCH_MARRIAGE,
-      'search[event=v2.birth,access=all]',
-      'search[event=v2.death,access=all]',
+      // SCOPES.SEARCH_DIVORCE,
+      // SCOPES.SEARCH_ADOPTION,
+      // SCOPES.SEARCH_NAMECHANGE
+      'search[event=v2.birth,access=my-jurisdiction]',
+      'search[event=v2.death,access=my-jurisdiction]',
+      'search[event=v2.marriage,access=my-jurisdiction]',
       'workqueue[id=assigned-to-you|recent|requires-completion|requires-updates-office|in-review-all|in-external-validation|ready-to-print|ready-to-issue]'
     ]
   },
