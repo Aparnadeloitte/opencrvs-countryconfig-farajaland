@@ -35,8 +35,7 @@ export const InformantType = {
   OTHER: 'OTHER',
   GRANDFATHER: 'GRANDFATHER',
   GRANDMOTHER: 'GRANDMOTHER',
-  BROTHER: 'BROTHER',
-  SISTER: 'SISTER',
+  SELF: 'SELF',
   LEGAL_GUARDIAN: 'LEGAL_GUARDIAN'
 } as const
 export type InformantTypeKey = keyof typeof InformantType
@@ -63,15 +62,10 @@ const informantMessageDescriptors = {
     description: 'Label for option Grandmother',
     id: 'v2.form.field.label.informantRelation.grandmother'
   },
-  BROTHER: {
-    defaultMessage: 'Brother',
-    description: 'Label for option brother',
-    id: 'v2.form.field.label.informantRelation.brother'
-  },
-  SISTER: {
-    defaultMessage: 'Sister',
-    description: 'Label for option Sister',
-    id: 'v2.form.field.label.informantRelation.sister'
+  SELF: {
+    defaultMessage: 'Self',
+    description: 'Label for option self',
+    id: 'v2.form.field.label.informantRelation.self'
   },
   LEGAL_GUARDIAN: {
     defaultMessage: 'Legal guardian',
@@ -159,6 +153,26 @@ export const informant = defineFormPage({
       validation: [invalidNameValidator('informant.name')]
     },
     {
+      id: 'informant.surname',
+      type: FieldType.NAME,
+      required: true,
+      configuration: { maxLength: MAX_NAME_LENGTH },
+      hideLabel: true,
+      label: {
+        defaultMessage: "Informant's surname",
+        description: 'This is the label for the field',
+        id: 'v2.event.birth.action.declare.form.section.informant.field.surname.label'
+      },
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: informantOtherThanParent
+        }
+      ],
+      parent: field('informant.relation'),
+      validation: [invalidNameValidator('informant.name')]
+    },
+    {
       id: 'informant.dob',
       type: 'DATE',
       required: true,
@@ -200,6 +214,8 @@ export const informant = defineFormPage({
     {
       id: 'informant.dobUnknown',
       type: FieldType.CHECKBOX,
+      required: false,
+      secured: true,
       label: {
         defaultMessage: 'Exact date of birth unknown',
         description: 'This is the label for the field',
@@ -220,7 +236,8 @@ export const informant = defineFormPage({
     {
       id: 'informant.age',
       type: FieldType.TEXT,
-      required: true,
+      required: false,
+      secured: true,
       label: {
         defaultMessage: 'Age of informant',
         description: 'This is the label for the field',
@@ -247,7 +264,8 @@ export const informant = defineFormPage({
     {
       id: 'informant.nationality',
       type: FieldType.COUNTRY,
-      required: true,
+      required: false,
+      secured: true,
       label: {
         defaultMessage: 'Nationality',
         description: 'This is the label for the field',
@@ -266,6 +284,7 @@ export const informant = defineFormPage({
       id: 'informant.idType',
       type: FieldType.SELECT,
       required: true,
+      secured: true,
       label: {
         defaultMessage: 'Type of ID',
         description: 'This is the label for the field',
@@ -292,10 +311,7 @@ export const informant = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: and(
-            field('informant.idType').isEqualTo(IdType.NATIONAL_ID),
-            informantOtherThanParent
-          )
+          conditional: informantOtherThanParent
         }
       ],
       validation: [

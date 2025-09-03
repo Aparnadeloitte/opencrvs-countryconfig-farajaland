@@ -37,6 +37,11 @@ export const informantMessageDescriptors = {
     description: 'Label for option Grandmother',
     id: 'form.field.label.informantRelation.grandmother'
   },
+  SELF: {
+    defaultMessage: 'Self',
+    description: 'Label for option self',
+    id: 'form.field.label.informantRelation.self'
+  },
   BROTHER: {
     defaultMessage: 'Brother',
     description: 'Label for option brother',

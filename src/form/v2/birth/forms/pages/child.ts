@@ -43,13 +43,12 @@ const TypeOfBirth = {
 } as const
 
 const AttendantAtBirth = {
-  PHYSICIAN: 'PHYSICIAN',
+  DOCTOR: 'DOCTOR',
   NURSE: 'NURSE',
   MIDWIFE: 'MIDWIFE',
-  OTHER_PARAMEDICAL_PERSONNEL: 'OTHER_PARAMEDICAL_PERSONNEL',
-  LAYPERSON: 'LAYPERSON',
-  TRADITIONAL_BIRTH_ATTENDANT: 'TRADITIONAL_BIRTH_ATTENDANT',
-  NONE: 'NONE'
+  OTHER_HEALTHCARE_PROFESSIONAL: 'OTHER_HEALTHCARE_PROFESSIONAL',
+  NONE: 'NONE',
+  OTHER: 'OTHER'
 } as const
 
 export const PlaceOfBirth = {
@@ -95,10 +94,10 @@ const typeOfBirthMessageDescriptors = {
 } satisfies Record<keyof typeof TypeOfBirth, TranslationConfig>
 
 const attendantAtBirthMessageDescriptors = {
-  PHYSICIAN: {
-    defaultMessage: 'Physician',
-    description: 'Label for physician attendant',
-    id: 'v2.form.field.label.attendantAtBirthPhysician'
+  DOCTOR: {
+    defaultMessage: 'Doctor',
+    description: 'Label for doctor',
+    id: 'v2.form.field.label.attendantAtBirthDoctor'
   },
   NURSE: {
     defaultMessage: 'Nurse',
@@ -110,25 +109,20 @@ const attendantAtBirthMessageDescriptors = {
     description: 'Label for midwife attendant',
     id: 'v2.form.field.label.attendantAtBirthMidwife'
   },
-  OTHER_PARAMEDICAL_PERSONNEL: {
-    defaultMessage: 'Other paramedical personnel',
-    description: 'Label for other paramedical personnel',
+  OTHER_HEALTHCARE_PROFESSIONAL: {
+    defaultMessage: 'Other healthcare professional',
+    description: 'Label for other healthcare professional',
     id: 'v2.form.field.label.attendantAtBirthOtherParamedicalPersonnel'
-  },
-  LAYPERSON: {
-    defaultMessage: 'Layperson',
-    description: 'Label for layperson attendant',
-    id: 'v2.form.field.label.attendantAtBirthLayperson'
-  },
-  TRADITIONAL_BIRTH_ATTENDANT: {
-    defaultMessage: 'Traditional birth attendant',
-    description: 'Label for traditional birth attendant',
-    id: 'v2.form.field.label.attendantAtBirthTraditionalBirthAttendant'
   },
   NONE: {
     defaultMessage: 'None',
     description: 'Label for no attendant',
     id: 'v2.form.field.label.attendantAtBirthNone'
+  },
+  OTHER: {
+    defaultMessage: 'Other',
+    description: 'Label for other attendant',
+    id: 'v2.form.field.label.attendantAtBirthOther'
   }
 } satisfies Record<keyof typeof AttendantAtBirth, TranslationConfig>
 
@@ -401,13 +395,51 @@ export const child = defineFormPage({
     {
       id: 'child.attendantAtBirth',
       type: FieldType.SELECT,
-      required: false,
+      required: true,
       label: {
         defaultMessage: 'Attendant at birth',
-        description: 'This is the label for the field',
+        description: 'This is the label for attendant at birth field',
         id: 'v2.event.birth.action.declare.form.section.child.field.attendantAtBirth.label'
       },
       options: attendantAtBirthOptions
+    },
+    {
+      id: 'child.other',
+      type: FieldType.TEXT,
+      required: true,
+      label: {
+        defaultMessage: 'Other',
+        description: 'This is the label for the other field',
+        id: 'v2.event.birth.action.declare.form.section.child.field.other.label'
+      },
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: field('child.attendantAtBirth').isEqualTo(
+            AttendantAtBirth.OTHER
+          )
+        }
+      ]
+    },
+    {
+      id: 'child.givenName',
+      type: FieldType.TEXT,
+      required: true,
+      label: {
+        defaultMessage: 'Given Name',
+        description: 'This is the label for the given name field',
+        id: 'v2.event.birth.action.declare.form.section.child.field.givenName.label'
+      }
+    },
+    {
+      id: 'child.surname',
+      type: FieldType.TEXT,
+      required: true,
+      label: {
+        defaultMessage: 'Surname',
+        description: 'This is the label for the surname field',
+        id: 'v2.event.birth.action.declare.form.section.child.field.surname.label'
+      }
     }
   ]
 })

@@ -1048,6 +1048,7 @@ form.field.label.informantRelation.officer,,Officer-in-charge of the road or pub
 form.field.label.informantRelation.other,,Other ({otherInformantType})
 form.field.label.informantRelation.others,Label for option someone else,Someone else
 form.field.label.informantRelation.owner,,Owner of the house or building where the death occurred
+form.field.label.informantRelation.self, Label for option Self, Self
 form.field.label.informantRelation.sister,Label for option Sister,Sister
 form.field.label.informantRelation.son,Label for option Son,Son
 form.field.label.informantRelation.sonInLaw,Label for option Son in law,Son in law
@@ -2613,9 +2614,12 @@ v2.event.birth.action.declare.form.section.child.field.dob.error,This is the err
 v2.event.birth.action.declare.form.section.child.field.dob.label,This is the label for the field,Date of birth
 v2.event.birth.action.declare.form.section.child.field.firstname.label,This is the label for the field,First name(s)
 v2.event.birth.action.declare.form.section.child.field.gender.label,This is the label for the field,Sex
+v2.event.birth.action.declare.form.section.child.field.givenName.label,This is the label for given name field, Given Name
 v2.event.birth.action.declare.form.section.child.field.name.label,This is the label for the field,Child's name
+v2.event.birth.action.declare.form.section.child.field.other.label,This is the label for other field,Other
 v2.event.birth.action.declare.form.section.child.field.placeOfBirth.label,This is the label for the field,Place of delivery
 v2.event.birth.action.declare.form.section.child.field.surname.label,This is the label for the field,Last name
+v2.event.birth.action.declare.form.section.child.field.surname.label,This is the label for surname field,Surname 
 v2.event.birth.action.declare.form.section.child.field.weightAtBirth.label,This is the label for the field,Weight at birth
 v2.event.birth.action.declare.form.section.child.field.weightAtBirth.postfix,This is the postfix for the weight field,kg
 v2.event.birth.action.declare.form.section.documents.field.helper.label,This is the label for the field,The following documents are required
@@ -2635,6 +2639,7 @@ v2.event.birth.action.declare.form.section.informant.field.other.relation.label,
 v2.event.birth.action.declare.form.section.informant.field.phoneNo.error,The error message that appears on phone numbers where the first two characters must be a 01 and length must be 11,Must be a valid 10 digit number that starts with 0(7|9)
 v2.event.birth.action.declare.form.section.informant.field.phoneNo.label,This is the label for the field,Phone number
 v2.event.birth.action.declare.form.section.informant.field.relation.label,This is the label for the field,Relationship to child
+v2.event.birth.action.declare.form.section.informant.field.surname.label,This is the label for teh surname field,Surname
 v2.event.birth.action.declare.form.section.mother.field.age.label,This is the label for the field,Age of mother
 v2.event.birth.action.declare.form.section.mother.field.detailsNotAvailable.label,This is the label for the field,Mother's details are not available
 v2.event.birth.action.declare.form.section.mother.field.name.label,This is the label for the field,Mother's name
@@ -2982,12 +2987,13 @@ v2.file.upload.fileType.error,Error message when the selected file type is not s
 v2.form.birth.child.title,Form section title for Child,Child's details
 v2.form.field.label.No,Label for form field radio option No,No
 v2.form.field.label.Yes,Label for form field radio option Yes,Yes
+v2.form.field.label.attendantAtBirthDoctor,Label for physician attendant,Doctor
 v2.form.field.label.attendantAtBirthLayperson,Label for layperson attendant,Layperson
 v2.form.field.label.attendantAtBirthMidwife,Label for midwife attendant,Midwife
 v2.form.field.label.attendantAtBirthNone,Label for no attendant,None
 v2.form.field.label.attendantAtBirthNurse,Label for nurse attendant,Nurse
+v2.form.field.label.attendantAtBirthOther,Label for other attendant,Other
 v2.form.field.label.attendantAtBirthOtherParamedicalPersonnel,Label for other paramedical personnel,Other paramedical personnel
-v2.form.field.label.attendantAtBirthPhysician,Label for physician attendant,Physician
 v2.form.field.label.attendantAtBirthTraditionalBirthAttendant,Label for traditional birth attendant,Traditional birth attendant
 v2.form.field.label.birthTypeHigherMultipleDelivery,Label for higher multiple delivery birth,Higher multiple delivery
 v2.form.field.label.birthTypeQuadruplet,Label for quadruplet birth,Quadruplet
@@ -3012,6 +3018,7 @@ v2.form.field.label.informantRelation.grandmother,Label for option Grandmother,G
 v2.form.field.label.informantRelation.legalGuardian,Label for option Legal Guardian,Legal guardian
 v2.form.field.label.informantRelation.mother,Label for option mother,Mother
 v2.form.field.label.informantRelation.others,Label for option someone else,Someone else
+v2.form.field.label.informantRelation.self, Label for option Self, Self
 v2.form.field.label.informantRelation.sister,Label for option Sister,Sister
 v2.form.field.label.maritalStatusDivorced,Option for form field: Marital status,Divorced
 v2.form.field.label.maritalStatusMarried,Option for form field: Marital status,Married
