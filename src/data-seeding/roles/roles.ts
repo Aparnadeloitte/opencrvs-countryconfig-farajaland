@@ -143,7 +143,7 @@ export const roles: Role[] = [
       // SCOPES.SEARCH_NAMECHANGE
       'search[event=v2.birth,access=my-jurisdiction]',
       'search[event=v2.death,access=my-jurisdiction]',
-      'search[event=v2.marriage,access=my-jurisdiction]',
+      // 'search[event=v2.marriage,access=my-jurisdiction]',
       'workqueue[id=assigned-to-you|recent|requires-completion|requires-updates-office|in-review-all|in-external-validation|ready-to-print|ready-to-issue]'
     ]
   },
