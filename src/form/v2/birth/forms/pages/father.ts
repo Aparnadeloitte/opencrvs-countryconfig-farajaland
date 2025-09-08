@@ -50,6 +50,7 @@ export const father = defineFormPage({
     {
       id: 'father.detailsNotAvailable',
       type: FieldType.CHECKBOX,
+      defaultValue: false,
       label: {
         defaultMessage: "Father's details are not available",
         description: 'This is the label for the field',
@@ -69,6 +70,17 @@ export const father = defineFormPage({
         {
           type: ConditionalType.SHOW,
           conditional: and(field('father.detailsNotAvailable').isEqualTo(true))
+        }
+      ]
+    },
+    {
+      id: 'father.details.divider',
+      type: FieldType.DIVIDER,
+      label: emptyMessage,
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: field('father.detailsNotAvailable').isFalsy()
         }
       ]
     },
