@@ -2636,6 +2636,7 @@ v2.event.birth.action.declare.form.section.father.field.reason.label,This is the
 v2.event.birth.action.declare.form.section.informant.field.age.label,This is the label for the field,Age of informant
 v2.event.birth.action.declare.form.section.informant.field.email.label,This is the label for the field,Email
 v2.event.birth.action.declare.form.section.informant.field.name.label,This is the label for the field,Informant's name
+v2.event.birth.action.declare.form.section.informant.field.occupation.label,This is the label for the Occupation field,Occupation
 v2.event.birth.action.declare.form.section.informant.field.other.relation.label,This is the label for the field,Relationship to child
 v2.event.birth.action.declare.form.section.informant.field.phoneNo.error,The error message that appears on phone numbers where the first two characters must be a 01 and length must be 11,Must be a valid 10 digit number that starts with 0(7|9)
 v2.event.birth.action.declare.form.section.informant.field.phoneNo.label,This is the label for the field,Phone number
@@ -2973,7 +2974,7 @@ v2.field.address.label.rural,Label for rural area,Rural
 v2.field.address.label.urban,Label for urban area,Urban
 v2.field.address.number.label,Label for address number,Number
 v2.field.address.postcodeOrZip.label,This is the label for the field,Postcode / Zip
-v2.field.address.province.label,Label for province in address,Province
+v2.field.address.province.label,Label for province in address,Island
 v2.field.address.residentialArea.label,Label for residential area in address,Residential Area
 v2.field.address.state.label,This is the label for the field,State
 v2.field.address.street.label,Label for street in address,Street

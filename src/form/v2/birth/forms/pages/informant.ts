@@ -337,7 +337,6 @@ export const informant = defineFormPage({
       ],
       parent: field('informant.relation')
     },
-
     {
       id: 'informant.addressDivider_1',
       type: FieldType.DIVIDER,
@@ -433,12 +432,27 @@ export const informant = defineFormPage({
     {
       id: 'informant.email',
       type: FieldType.EMAIL,
-      required: true,
+      required: false,
       secured: true,
       label: {
         defaultMessage: 'Email',
         description: 'This is the label for the field',
         id: 'v2.event.birth.action.declare.form.section.informant.field.email.label'
+      },
+      configuration: {
+        maxLength: 255
+      },
+      parent: field('informant.relation')
+    },
+    {
+      id: 'informant.occupation',
+      type: FieldType.TEXT,
+      required: false,
+      secured: false,
+      label: {
+        defaultMessage: 'Occupation',
+        description: 'This is the label for the Occupation field',
+        id: 'v2.event.birth.action.declare.form.section.informant.field.occupation.label'
       },
       configuration: {
         maxLength: 255
