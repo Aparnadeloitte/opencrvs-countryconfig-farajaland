@@ -2608,7 +2608,10 @@ v2.event.birth.action.declare.form.label,This is what this form is referred as i
 v2.event.birth.action.declare.form.review.comment.label,Label for the comment field in the review section,Comment
 v2.event.birth.action.declare.form.review.signature.label,Label for the signature field in the review section,Signature of informant
 v2.event.birth.action.declare.form.review.title,Title of the form to show in review page,"{child.name.firstname, select, __EMPTY__ {Birth declaration} other {{child.name.surname, select, __EMPTY__ {Birth declaration for {child.name.firstname}} other {Birth declaration for {child.name.firstname} {child.name.surname}}}}}"
+v2.event.birth.action.declare.form.section.child.field.attendantAtBirth.givenNames.label,This is the label for the field,Attendant at birth
 v2.event.birth.action.declare.form.section.child.field.attendantAtBirth.label,This is the label for the field,Attendant at birth
+v2.event.birth.action.declare.form.section.child.field.attendantAtBirth.other.label,This is the label for the field,Attendant at birth
+v2.event.birth.action.declare.form.section.child.field.attendantAtBirth.surname.label,This is the label for the field,Attendant at birth
 v2.event.birth.action.declare.form.section.child.field.birthLocation.label,This is the label for the field,Location of birth
 v2.event.birth.action.declare.form.section.child.field.birthType.label,This is the label for the field,Type of birth
 v2.event.birth.action.declare.form.section.child.field.dob.error,This is the error message for invalid date,Must be a valid birth date

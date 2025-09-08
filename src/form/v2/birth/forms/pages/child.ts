@@ -29,6 +29,7 @@ import {
   invalidNameValidator,
   MAX_NAME_LENGTH
 } from '@countryconfig/form/v2/birth/validators'
+import { attendantAtBirth } from '@countryconfig/form/birth/optional-fields'
 
 const GenderTypes = {
   MALE: 'male',
@@ -395,13 +396,63 @@ export const child = defineFormPage({
     {
       id: 'child.attendantAtBirth',
       type: FieldType.SELECT,
-      required: false,
+      required: true,
       label: {
         defaultMessage: 'Attendant at birth',
         description: 'This is the label for the field',
         id: 'v2.event.birth.action.declare.form.section.child.field.attendantAtBirth.label'
       },
       options: attendantAtBirthOptions
+    },
+    {
+      id: 'child.attendantAtBirth.other',
+      type: FieldType.TEXT,
+      required: true,
+      label: {
+        defaultMessage: 'Other',
+        description: 'Label for other attendant at birth',
+        id: 'v2.event.birth.action.declare.form.section.child.field.attendantAtBirth.other.label'
+      },
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: field('child.attendantAtBirth').isEqualTo(
+            AttendantAtBirth.OTHER
+          )
+        }
+      ]
+    },
+    {
+      id: 'child.attendantAtBirth.givenNames',
+      type: FieldType.TEXT,
+      required: true,
+      label: {
+        defaultMessage: 'Given name(s)',
+        description: 'Label for given names of other attendant',
+        id: 'v2.event.birth.action.declare.form.section.child.field.attendantAtBirth.givenNames.label'
+      },
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: not(field('child.attendantAtBirth').isFalsy())
+        }
+      ]
+    },
+    {
+      id: 'child.attendantAtBirth.surname',
+      type: FieldType.TEXT,
+      required: true,
+      label: {
+        defaultMessage: 'Surname',
+        description: 'Label for surname of other attendant',
+        id: 'v2.event.birth.action.declare.form.section.child.field.attendantAtBirth.surname.label'
+      },
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: not(field('child.attendantAtBirth').isFalsy())
+        }
+      ]
     }
   ]
 })
