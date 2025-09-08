@@ -403,6 +403,29 @@ export const informant = defineFormPage({
       parent: field('informant.relation')
     },
     {
+      id: 'informant.pointOfContactDivider',
+      type: FieldType.DIVIDER,
+      label: emptyMessage,
+      parent: field('informant.pointofContact'),
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: not(informantOtherThanParent)
+        }
+      ]
+    },
+    {
+      id: 'informant.pointOfContactheading',
+      type: FieldType.PARAGRAPH,
+      label: {
+        defaultMessage: 'Usual place of residence',
+        description: 'This is the label for the field',
+        id: 'v2.event.birth.action.declare.form.section.person.field.pointOfContact.label'
+      },
+      configuration: { styles: { fontVariant: 'h3' } },
+      parent: field('informant.relation')
+    },
+    {
       id: 'informant.phoneNo',
       type: FieldType.PHONE,
       required: false,
@@ -442,6 +465,12 @@ export const informant = defineFormPage({
       configuration: {
         maxLength: 255
       },
+      parent: field('informant.relation')
+    },
+    {
+      id: 'informant.occupationDivider',
+      type: FieldType.DIVIDER,
+      label: emptyMessage,
       parent: field('informant.relation')
     },
     {

@@ -2668,6 +2668,7 @@ v2.event.birth.action.declare.form.section.person.field.nid.label,This is the la
 v2.event.birth.action.declare.form.section.person.field.occupation.label,This is the label for the field,Occupation
 v2.event.birth.action.declare.form.section.person.field.other.label,This is the label for the field,Other
 v2.event.birth.action.declare.form.section.person.field.passport.label,This is the label for the field,ID Number
+v2.event.birth.action.declare.form.section.person.field.pointOfContact.label,This is the label for the field,Point of contact
 v2.event.birth.action.declare.form.section.person.field.surname.label,This is the label for the field,Last name
 v2.event.birth.action.declare.form.version.1,This is the first version of the form,Version 1
 v2.event.birth.action.declare.label,This is shown as the action name anywhere the user can trigger the action from,Declare
