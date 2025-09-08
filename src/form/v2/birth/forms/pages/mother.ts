@@ -50,6 +50,7 @@ export const mother = defineFormPage({
     {
       id: 'mother.detailsNotAvailable',
       type: FieldType.CHECKBOX,
+      defaultValue: false,
       label: {
         defaultMessage: "Mother's details are not available",
         description: 'This is the label for the field',
@@ -79,9 +80,7 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: not(
-            field('informant.relation').isEqualTo(InformantType.MOTHER)
-          )
+          conditional: field('mother.detailsNotAvailable').isFalsy()
         }
       ]
     },
