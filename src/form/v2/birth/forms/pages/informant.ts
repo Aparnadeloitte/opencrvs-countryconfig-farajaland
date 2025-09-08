@@ -92,7 +92,7 @@ export const informant = defineFormPage({
     {
       id: 'informant.other.relation',
       type: FieldType.TEXT,
-      required: true,
+      required: false,
       label: {
         defaultMessage: 'Relationship to child',
         description: 'This is the label for the field',
@@ -111,8 +111,29 @@ export const informant = defineFormPage({
     {
       id: 'informant.name',
       type: FieldType.NAME,
-      required: true,
-      configuration: { maxLength: MAX_NAME_LENGTH },
+      required: false,
+      secured: true,
+      configuration: {
+        maxLength: MAX_NAME_LENGTH,
+        name: {
+          firstname: {
+            required: false,
+            label: {
+              defaultMessage: 'Given name(s)',
+              description: 'Label for form field: First names',
+              id: 'form.field.label.firstNames'
+            }
+          },
+          surname: {
+            required: false,
+            label: {
+              defaultMessage: 'Last name',
+              description: 'Label for family name text input',
+              id: 'form.field.label.familyName'
+            }
+          }
+        }
+      },
       hideLabel: true,
       label: {
         defaultMessage: "Informant's name",
@@ -131,7 +152,8 @@ export const informant = defineFormPage({
     {
       id: 'informant.dob',
       type: 'DATE',
-      required: true,
+      required: false,
+      secured: true,
       validation: [
         {
           message: {
@@ -189,8 +211,9 @@ export const informant = defineFormPage({
     },
     {
       id: 'informant.age',
-      type: FieldType.TEXT,
-      required: true,
+      type: FieldType.NUMBER,
+      required: false,
+      secured: true,
       label: {
         defaultMessage: 'Age of informant',
         description: 'This is the label for the field',
@@ -217,7 +240,8 @@ export const informant = defineFormPage({
     {
       id: 'informant.nationality',
       type: FieldType.COUNTRY,
-      required: true,
+      required: false,
+      secured: true,
       label: {
         defaultMessage: 'Nationality',
         description: 'This is the label for the field',
@@ -251,43 +275,10 @@ export const informant = defineFormPage({
       parent: field('informant.relation')
     },
     {
-      id: 'informant.nid',
-      type: FieldType.ID,
-      required: true,
-      label: {
-        defaultMessage: 'ID Number',
-        description: 'This is the label for the field',
-        id: 'v2.event.birth.action.declare.form.section.person.field.nid.label'
-      },
-      conditionals: [
-        {
-          type: ConditionalType.SHOW,
-          conditional: and(
-            field('informant.idType').isEqualTo(IdType.NATIONAL_ID),
-            informantOtherThanParent
-          )
-        }
-      ],
-      validation: [
-        nationalIdValidator('informant.nid'),
-        {
-          message: {
-            defaultMessage: 'National id must be unique',
-            description: 'This is the error message for non-unique ID Number',
-            id: 'v2.event.birth.action.declare.form.nid.unique'
-          },
-          validator: and(
-            not(field('informant.nid').isEqualTo(field('mother.nid'))),
-            not(field('informant.nid').isEqualTo(field('father.nid')))
-          )
-        }
-      ],
-      parent: field('informant.relation')
-    },
-    {
       id: 'informant.passport',
       type: FieldType.TEXT,
-      required: true,
+      required: false,
+      secured: true,
       label: {
         defaultMessage: 'ID Number',
         description: 'This is the label for the field',
@@ -305,27 +296,48 @@ export const informant = defineFormPage({
       parent: field('informant.relation')
     },
     {
-      id: 'informant.brn',
+      id: 'informant.bc',
       type: FieldType.TEXT,
-      required: true,
+      required: false,
+      secured: true,
       label: {
         defaultMessage: 'ID Number',
         description: 'This is the label for the field',
-        id: 'v2.event.birth.action.declare.form.section.person.field.brn.label'
+        id: 'v2.event.birth.action.declare.form.section.person.field.bc.label'
       },
       conditionals: [
         {
           type: ConditionalType.SHOW,
           conditional: and(
-            field('informant.idType').isEqualTo(
-              IdType.BIRTH_REGISTRATION_NUMBER
-            ),
+            field('informant.idType').isEqualTo(IdType.BIRTH_CERTIFICATE),
             informantOtherThanParent
           )
         }
       ],
       parent: field('informant.relation')
     },
+    {
+      id: 'informant.other',
+      type: FieldType.TEXT,
+      required: false,
+      secured: false,
+      label: {
+        defaultMessage: 'Other',
+        description: 'This is the label for the field',
+        id: 'v2.event.birth.action.declare.form.section.person.field.other.label'
+      },
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: and(
+            field('informant.idType').isEqualTo(IdType.OTHER),
+            informantOtherThanParent
+          )
+        }
+      ],
+      parent: field('informant.relation')
+    },
+
     {
       id: 'informant.addressDivider_1',
       type: FieldType.DIVIDER,

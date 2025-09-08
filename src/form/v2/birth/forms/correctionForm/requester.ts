@@ -248,26 +248,6 @@ export const correctionFormRequesters: FieldConfig[] = [
     ]
   },
   {
-    id: 'requester.nid',
-    type: FieldType.TEXT,
-    required: true,
-    label: {
-      defaultMessage: 'ID Number',
-      description: 'This is the label for the field',
-      id: 'v2.event.birth.action.correction.form.section.requester.nid.label'
-    },
-    conditionals: [
-      {
-        type: ConditionalType.SHOW,
-        conditional: and(
-          field('requester.type').isEqualTo('SOMEONE_ELSE'),
-          field('requester.idType').isEqualTo(IdType.NATIONAL_ID)
-        )
-      }
-    ],
-    validation: [nationalIdValidator('requester.nid')]
-  },
-  {
     id: 'requester.passport',
     type: FieldType.TEXT,
     required: true,
@@ -301,7 +281,7 @@ export const correctionFormRequesters: FieldConfig[] = [
         type: ConditionalType.SHOW,
         conditional: and(
           field('requester.type').isEqualTo('SOMEONE_ELSE'),
-          field('requester.idType').isEqualTo(IdType.BIRTH_REGISTRATION_NUMBER)
+          field('requester.idType').isEqualTo(IdType.BIRTH_CERTIFICATE)
         )
       }
     ]

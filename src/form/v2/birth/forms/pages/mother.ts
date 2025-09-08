@@ -233,39 +233,6 @@ export const mother = defineFormPage({
       ]
     },
     {
-      id: 'mother.nid',
-      type: FieldType.ID,
-      required: true,
-      label: {
-        defaultMessage: 'ID Number',
-        description: 'This is the label for the field',
-        id: 'v2.event.birth.action.declare.form.section.person.field.nid.label'
-      },
-      conditionals: [
-        {
-          type: ConditionalType.SHOW,
-          conditional: and(
-            field('mother.idType').isEqualTo(IdType.NATIONAL_ID),
-            requireMotherDetails
-          )
-        }
-      ],
-      validation: [
-        nationalIdValidator('mother.nid'),
-        {
-          message: {
-            defaultMessage: 'National id must be unique',
-            description: 'This is the error message for non-unique ID Number',
-            id: 'v2.event.birth.action.declare.form.nid.unique'
-          },
-          validator: and(
-            not(field('mother.nid').isEqualTo(field('father.nid'))),
-            not(field('mother.nid').isEqualTo(field('informant.nid')))
-          )
-        }
-      ]
-    },
-    {
       id: 'mother.passport',
       type: FieldType.TEXT,
       required: true,
@@ -291,13 +258,13 @@ export const mother = defineFormPage({
       label: {
         defaultMessage: 'ID Number',
         description: 'This is the label for the field',
-        id: 'v2.event.birth.action.declare.form.section.person.field.brn.label'
+        id: 'v2.event.birth.action.declare.form.section.person.field.bc.label'
       },
       conditionals: [
         {
           type: ConditionalType.SHOW,
           conditional: and(
-            field('mother.idType').isEqualTo(IdType.BIRTH_REGISTRATION_NUMBER),
+            field('mother.idType').isEqualTo(IdType.BIRTH_CERTIFICATE),
             requireMotherDetails
           )
         }

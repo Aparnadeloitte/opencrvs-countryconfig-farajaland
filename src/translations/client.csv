@@ -2650,10 +2650,11 @@ v2.event.birth.action.declare.form.section.person.field.address.label,This is th
 v2.event.birth.action.declare.form.section.person.field.address.province.label,This is the label for the field,Province
 v2.event.birth.action.declare.form.section.person.field.address.urbanOrRural.label,This is the label for the field,Urban or Rural
 v2.event.birth.action.declare.form.section.person.field.address.village.label,This is the label for the field,Village
-v2.event.birth.action.declare.form.section.person.field.addressHelper.label,This is the label for the field,Usual place of residence
-v2.event.birth.action.declare.form.section.person.field.age.checkbox.label,This is the label for the field,Exact date of birth unknown
+v2.event.birth.action.declare.form.section.person.field.addressHelper.label,This is the label for the field,Residence
+v2.event.birth.action.declare.form.section.person.field.age.checkbox.label,This is the label for the field,Exact date unknown
 v2.event.birth.action.declare.form.section.person.field.age.postfix,This is the postfix for age field,years
 v2.event.birth.action.declare.form.section.person.field.age.text.label,This is the label for the field,Age of person
+v2.event.birth.action.declare.form.section.person.field.bc.label,This is the label for the field,ID Number
 v2.event.birth.action.declare.form.section.person.field.brn.label,This is the label for the field,ID Number
 v2.event.birth.action.declare.form.section.person.field.dob.error,This is the error message for invalid date,Must be a valid birth date
 v2.event.birth.action.declare.form.section.person.field.dob.label,This is the label for the field,Date of birth
@@ -2664,6 +2665,7 @@ v2.event.birth.action.declare.form.section.person.field.maritalStatus.label,This
 v2.event.birth.action.declare.form.section.person.field.nationality.label,This is the label for the field,Nationality
 v2.event.birth.action.declare.form.section.person.field.nid.label,This is the label for the field,ID Number
 v2.event.birth.action.declare.form.section.person.field.occupation.label,This is the label for the field,Occupation
+v2.event.birth.action.declare.form.section.person.field.other.label,This is the label for the field,Other
 v2.event.birth.action.declare.form.section.person.field.passport.label,This is the label for the field,ID Number
 v2.event.birth.action.declare.form.section.person.field.surname.label,This is the label for the field,Last name
 v2.event.birth.action.declare.form.version.1,This is the first version of the form,Version 1
@@ -3009,9 +3011,11 @@ v2.form.field.label.educationAttainmentISCED4,Option for form field: ISCED4 educ
 v2.form.field.label.educationAttainmentISCED5,Option for form field: ISCED5 education,Tertiary
 v2.form.field.label.educationAttainmentNone,Option for form field: no education,No schooling
 v2.form.field.label.healthInstitution,Select item for Health Institution,Health Institution
+v2.form.field.label.iDTypeBC,Option for form field: Type of ID,Birth certificate
 v2.form.field.label.iDTypeBRN,Option for form field: Type of ID,Birth Registration Number
 v2.form.field.label.iDTypeNationalID,Option for form field: Type of ID,National ID
 v2.form.field.label.iDTypeNone,Option for form field: Type of ID,None
+v2.form.field.label.iDTypeOther,Option for form field: Type of ID,Other
 v2.form.field.label.iDTypePassport,Option for form field: Type of ID,Passport
 v2.form.field.label.informantRelation.brother,Label for option brother,Brother
 v2.form.field.label.informantRelation.father,Label for option father,Father

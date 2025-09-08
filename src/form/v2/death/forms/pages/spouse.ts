@@ -224,39 +224,6 @@ export const spouse = defineFormPage({
       ]
     },
     {
-      id: 'spouse.nid',
-      type: FieldType.ID,
-      required: true,
-      label: {
-        defaultMessage: 'ID Number',
-        description: 'This is the label for the field',
-        id: 'v2.event.death.action.declare.form.section.spouse.field.nid.label'
-      },
-      conditionals: [
-        {
-          type: ConditionalType.SHOW,
-          conditional: and(
-            field('spouse.idType').isEqualTo(IdType.NATIONAL_ID),
-            requireSpouseDetails
-          )
-        }
-      ],
-      validation: [
-        nationalIdValidator('spouse.nid'),
-        {
-          message: {
-            defaultMessage: 'National id must be unique',
-            description: 'This is the error message for non-unique ID Number',
-            id: 'v2.event.death.action.declare.form.nid.unique'
-          },
-          validator: and(
-            not(field('spouse.nid').isEqualTo(field('informant.nid'))),
-            not(field('spouse.nid').isEqualTo(field('deceased.nid')))
-          )
-        }
-      ]
-    },
-    {
       id: 'spouse.passport',
       type: FieldType.TEXT,
       required: true,
@@ -288,7 +255,7 @@ export const spouse = defineFormPage({
         {
           type: ConditionalType.SHOW,
           conditional: and(
-            field('spouse.idType').isEqualTo(IdType.BIRTH_REGISTRATION_NUMBER),
+            field('spouse.idType').isEqualTo(IdType.BIRTH_CERTIFICATE),
             requireSpouseDetails
           )
         }
@@ -302,7 +269,7 @@ export const spouse = defineFormPage({
         {
           type: ConditionalType.SHOW,
           conditional: and(
-            field('spouse.idType').isEqualTo(IdType.BIRTH_REGISTRATION_NUMBER),
+            field('spouse.idType').isEqualTo(IdType.BIRTH_CERTIFICATE),
             requireSpouseDetails
           )
         }
@@ -321,7 +288,7 @@ export const spouse = defineFormPage({
         {
           type: ConditionalType.SHOW,
           conditional: and(
-            field('spouse.idType').isEqualTo(IdType.BIRTH_REGISTRATION_NUMBER),
+            field('spouse.idType').isEqualTo(IdType.BIRTH_CERTIFICATE),
             requireSpouseDetails
           )
         }

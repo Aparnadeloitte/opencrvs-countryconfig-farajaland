@@ -179,35 +179,6 @@ export const deceased = defineFormPage({
       options: idTypeOptions
     },
     {
-      id: 'deceased.nid',
-      type: FieldType.ID,
-      required: true,
-      label: {
-        defaultMessage: 'ID Number',
-        description: 'This is the label for the field',
-        id: `v2.event.death.action.declare.form.section.person.field.nid.label`
-      },
-      conditionals: [
-        {
-          type: ConditionalType.SHOW,
-          conditional: field('deceased.idType').isEqualTo(IdType.NATIONAL_ID)
-        }
-      ],
-      validation: [
-        nationalIdValidator('deceased.nid'),
-        {
-          message: {
-            defaultMessage: 'National id must be unique',
-            description: 'This is the error message for non-unique ID Number',
-            id: 'v2.event.death.action.declare.form.nid.unique'
-          },
-          validator: and(
-            not(field('deceased.nid').isEqualTo(field('informant.nid')))
-          )
-        }
-      ]
-    },
-    {
       id: `deceased.passport`,
       type: FieldType.TEXT,
       required: true,
@@ -236,7 +207,7 @@ export const deceased = defineFormPage({
         {
           type: ConditionalType.SHOW,
           conditional: field('deceased.idType').isEqualTo(
-            IdType.BIRTH_REGISTRATION_NUMBER
+            IdType.BIRTH_CERTIFICATE
           )
         }
       ]
