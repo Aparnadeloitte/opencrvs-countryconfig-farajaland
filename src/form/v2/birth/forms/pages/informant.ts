@@ -32,12 +32,7 @@ import { IdType, idTypeOptions } from '../../../person'
 export const InformantType = {
   MOTHER: 'MOTHER',
   FATHER: 'FATHER',
-  OTHER: 'OTHER',
-  GRANDFATHER: 'GRANDFATHER',
-  GRANDMOTHER: 'GRANDMOTHER',
-  BROTHER: 'BROTHER',
-  SISTER: 'SISTER',
-  LEGAL_GUARDIAN: 'LEGAL_GUARDIAN'
+  OTHER: 'OTHER'
 } as const
 export type InformantTypeKey = keyof typeof InformantType
 
@@ -53,34 +48,9 @@ const informantMessageDescriptors = {
     description: 'Label for option father',
     id: 'v2.form.field.label.informantRelation.father'
   },
-  GRANDFATHER: {
-    defaultMessage: 'Grandfather',
-    description: 'Label for option Grandfather',
-    id: 'v2.form.field.label.informantRelation.grandfather'
-  },
-  GRANDMOTHER: {
-    defaultMessage: 'Grandmother',
-    description: 'Label for option Grandmother',
-    id: 'v2.form.field.label.informantRelation.grandmother'
-  },
-  BROTHER: {
-    defaultMessage: 'Brother',
-    description: 'Label for option brother',
-    id: 'v2.form.field.label.informantRelation.brother'
-  },
-  SISTER: {
-    defaultMessage: 'Sister',
-    description: 'Label for option Sister',
-    id: 'v2.form.field.label.informantRelation.sister'
-  },
-  LEGAL_GUARDIAN: {
-    defaultMessage: 'Legal guardian',
-    description: 'Label for option Legal Guardian',
-    id: 'v2.form.field.label.informantRelation.legalGuardian'
-  },
   OTHER: {
-    defaultMessage: 'Someone else',
-    description: 'Label for option someone else',
+    defaultMessage: 'Other',
+    description: 'Label for option other',
     id: 'v2.form.field.label.informantRelation.others'
   }
 } satisfies Record<keyof typeof InformantType, TranslationConfig>

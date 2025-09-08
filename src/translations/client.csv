@@ -3019,7 +3019,7 @@ v2.form.field.label.informantRelation.grandfather,Label for option Grandfather,G
 v2.form.field.label.informantRelation.grandmother,Label for option Grandmother,Grandmother
 v2.form.field.label.informantRelation.legalGuardian,Label for option Legal Guardian,Legal guardian
 v2.form.field.label.informantRelation.mother,Label for option mother,Mother
-v2.form.field.label.informantRelation.others,Label for option someone else,Someone else
+v2.form.field.label.informantRelation.others,Label for option other,Other
 v2.form.field.label.informantRelation.sister,Label for option Sister,Sister
 v2.form.field.label.maritalStatusDivorced,Option for form field: Marital status,Divorced
 v2.form.field.label.maritalStatusMarried,Option for form field: Marital status,Married

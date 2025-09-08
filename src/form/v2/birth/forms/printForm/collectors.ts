@@ -179,10 +179,5 @@ export const printCertificateCollectors: FieldConfig[] = [
       otherOption
     ]
   },
-  ...getFieldConfigForInformant(InformantType.OTHER),
-  ...getFieldConfigForInformant(InformantType.BROTHER),
-  ...getFieldConfigForInformant(InformantType.GRANDFATHER),
-  ...getFieldConfigForInformant(InformantType.GRANDMOTHER),
-  ...getFieldConfigForInformant(InformantType.SISTER),
-  ...getFieldConfigForInformant(InformantType.LEGAL_GUARDIAN)
+  ...getFieldConfigForInformant(InformantType.OTHER)
 ]
