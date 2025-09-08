@@ -53,28 +53,7 @@ export const mother = defineFormPage({
         defaultMessage: "Mother's details are not available",
         description: 'This is the label for the field',
         id: 'event.birth.action.declare.form.section.mother.field.detailsNotAvailable.label'
-      },
-      conditionals: [
-        {
-          type: ConditionalType.SHOW,
-          conditional: not(
-            field('informant.relation').isEqualTo(InformantType.MOTHER)
-          )
-        }
-      ]
-    },
-    {
-      id: 'mother.details.divider',
-      type: FieldType.DIVIDER,
-      label: emptyMessage,
-      conditionals: [
-        {
-          type: ConditionalType.SHOW,
-          conditional: not(
-            field('informant.relation').isEqualTo(InformantType.MOTHER)
-          )
-        }
-      ]
+      }
     },
     {
       id: 'mother.reason',
@@ -88,9 +67,19 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: and(
-            field('mother.detailsNotAvailable').isEqualTo(true),
-            not(field('informant.relation').isEqualTo(InformantType.MOTHER))
+          conditional: and(field('mother.detailsNotAvailable').isEqualTo(true))
+        }
+      ]
+    },
+    {
+      id: 'mother.details.divider',
+      type: FieldType.DIVIDER,
+      label: emptyMessage,
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: not(
+            field('informant.relation').isEqualTo(InformantType.MOTHER)
           )
         }
       ]
@@ -109,7 +98,7 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(field('mother.detailsNotAvailable').isEqualTo(false))
         }
       ],
       validation: [invalidNameValidator('mother.name')]
@@ -148,7 +137,8 @@ export const mother = defineFormPage({
           type: ConditionalType.SHOW,
           conditional: and(
             not(field('mother.dobUnknown').isEqualTo(true)),
-            requireMotherDetails
+            requireMotherDetails,
+            field('mother.detailsNotAvailable').isEqualTo(false)
           )
         }
       ]
@@ -164,7 +154,10 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(
+            requireMotherDetails,
+            field('mother.detailsNotAvailable').isEqualTo(false)
+          )
         },
         {
           type: ConditionalType.DISPLAY_ON_REVIEW,
@@ -193,8 +186,65 @@ export const mother = defineFormPage({
           type: ConditionalType.SHOW,
           conditional: and(
             field('mother.dobUnknown').isEqualTo(true),
+            requireMotherDetails,
+            field('mother.detailsNotAvailable').isEqualTo(false)
+          )
+        }
+      ]
+    },
+    {
+      id: 'mother.maritalStatus',
+      type: FieldType.SELECT,
+      required: false,
+      label: {
+        defaultMessage: 'Marital Status',
+        description: 'This is the label for the field',
+        id: 'v2.event.birth.action.declare.form.section.person.field.maritalStatus.label'
+      },
+      options: maritalStatusOptions,
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: and(
+            field('mother.detailsNotAvailable').isEqualTo(false),
             requireMotherDetails
           )
+        }
+      ]
+    },
+
+    {
+      id: 'mother.maidenName',
+      type: FieldType.TEXT,
+      required: true,
+      configuration: { maxLength: MAX_NAME_LENGTH },
+      label: {
+        defaultMessage: "Mother's maiden name",
+        description: 'This is the label for the field maidenName',
+        id: 'v2.event.birth.action.declare.form.section.mother.field.maidenName.label'
+      },
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: and(field('mother.detailsNotAvailable').isEqualTo(false))
+        }
+      ]
+    },
+    {
+      id: 'mother.placeOfBirth',
+      type: FieldType.TEXT,
+      required: false,
+      secured: true,
+      configuration: { maxLength: MAX_NAME_LENGTH },
+      label: {
+        defaultMessage: "Mother's place Of birth",
+        description: 'This is the label for the field place Of birth',
+        id: 'v2.event.birth.action.declare.form.section.mother.field.placeOfBirth.label'
+      },
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: and(field('mother.detailsNotAvailable').isEqualTo(false))
         }
       ]
     },
@@ -210,7 +260,10 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(
+            requireMotherDetails,
+            field('mother.detailsNotAvailable').isEqualTo(false)
+          )
         }
       ],
       defaultValue: 'COK'
@@ -228,7 +281,10 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(
+            requireMotherDetails,
+            field('mother.detailsNotAvailable').isEqualTo(false)
+          )
         }
       ]
     },
@@ -246,7 +302,8 @@ export const mother = defineFormPage({
           type: ConditionalType.SHOW,
           conditional: and(
             field('mother.idType').isEqualTo(IdType.PASSPORT),
-            requireMotherDetails
+            requireMotherDetails,
+            field('mother.detailsNotAvailable').isEqualTo(false)
           )
         }
       ]
@@ -265,7 +322,8 @@ export const mother = defineFormPage({
           type: ConditionalType.SHOW,
           conditional: and(
             field('mother.idType').isEqualTo(IdType.BIRTH_CERTIFICATE),
-            requireMotherDetails
+            requireMotherDetails,
+            field('mother.detailsNotAvailable').isEqualTo(false)
           )
         }
       ]
@@ -277,7 +335,10 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(
+            requireMotherDetails,
+            field('mother.detailsNotAvailable').isEqualTo(false)
+          )
         }
       ]
     },
@@ -293,7 +354,10 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(
+            field('mother.detailsNotAvailable').isEqualTo(false),
+            requireMotherDetails
+          )
         }
       ]
     },
@@ -310,7 +374,10 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(
+            field('mother.detailsNotAvailable').isEqualTo(false),
+            requireMotherDetails
+          )
         }
       ],
       defaultValue: {
@@ -328,27 +395,14 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(
+            field('mother.detailsNotAvailable').isEqualTo(false),
+            requireMotherDetails
+          )
         }
       ]
     },
-    {
-      id: 'mother.maritalStatus',
-      type: FieldType.SELECT,
-      required: false,
-      label: {
-        defaultMessage: 'Marital Status',
-        description: 'This is the label for the field',
-        id: 'v2.event.birth.action.declare.form.section.person.field.maritalStatus.label'
-      },
-      options: maritalStatusOptions,
-      conditionals: [
-        {
-          type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
-        }
-      ]
-    },
+
     {
       id: 'mother.educationalAttainment',
       type: FieldType.SELECT,
@@ -362,7 +416,10 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(
+            field('mother.detailsNotAvailable').isEqualTo(false),
+            requireMotherDetails
+          )
         }
       ]
     },
@@ -378,7 +435,10 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(
+            field('mother.detailsNotAvailable').isEqualTo(false),
+            requireMotherDetails
+          )
         }
       ]
     },
@@ -394,7 +454,10 @@ export const mother = defineFormPage({
       conditionals: [
         {
           type: ConditionalType.SHOW,
-          conditional: requireMotherDetails
+          conditional: and(
+            field('mother.detailsNotAvailable').isEqualTo(false),
+            requireMotherDetails
+          )
         }
       ],
       configuration: {

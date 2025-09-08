@@ -2642,8 +2642,10 @@ v2.event.birth.action.declare.form.section.informant.field.phoneNo.error,The err
 v2.event.birth.action.declare.form.section.informant.field.phoneNo.label,This is the label for the field,Phone number
 v2.event.birth.action.declare.form.section.informant.field.relation.label,This is the label for the field,Relationship to child
 v2.event.birth.action.declare.form.section.mother.field.age.label,This is the label for the field,Age of mother
-v2.event.birth.action.declare.form.section.mother.field.detailsNotAvailable.label,This is the label for the field,Mother's details are not available
+v2.event.birth.action.declare.form.section.mother.field.detailsNotAvailable.label,This is the label for the field,Mothers details are not available
+v2.event.birth.action.declare.form.section.mother.field.maidenName.label,This is the label for the field maidenName,Maiden Name
 v2.event.birth.action.declare.form.section.mother.field.name.label,This is the label for the field,Mother's name
+v2.event.birth.action.declare.form.section.mother.field.placeOfBirth.label,This is the label for the field placeOfBirth,Place of birth
 v2.event.birth.action.declare.form.section.mother.field.previousBirths.label,This is the label for the field,No. of previous births
 v2.event.birth.action.declare.form.section.mother.field.reason.label,This is the label for the field,Reason
 v2.event.birth.action.declare.form.section.person.field.address.district.label,This is the label for the field,District
