@@ -2631,8 +2631,10 @@ v2.event.birth.action.declare.form.section.documents.field.proofOther.label,This
 v2.event.birth.action.declare.form.section.father.field.address.addressSameAs.label,This is the label for the field,Same as mother's usual place of residence?
 v2.event.birth.action.declare.form.section.father.field.age.label,This is the label for the field,Age of father
 v2.event.birth.action.declare.form.section.father.field.detailsNotAvailable.label,This is the label for the field,Father's details are not available
-v2.event.birth.action.declare.form.section.father.field.name.label,This is the label for the field,Father's name
-v2.event.birth.action.declare.form.section.father.field.reason.label,This is the label for the field,Reason
+v2.event.birth.action.declare.form.section.father.field.email.label,This is the label for the field email,Email
+v2.event.birth.action.declare.form.section.father.field.name.label,This is the label for the field,Fathers name
+v2.event.birth.action.declare.form.section.father.field.reason.label,This is the label for the field reason,Reason
+v2.event.birth.action.declare.form.section.father.field.surname.label,This is the label for the field surname,Surname
 v2.event.birth.action.declare.form.section.informant.field.age.label,This is the label for the field,Age of informant
 v2.event.birth.action.declare.form.section.informant.field.email.label,This is the label for the field,Email
 v2.event.birth.action.declare.form.section.informant.field.name.label,This is the label for the field,Informant's name
