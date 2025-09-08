@@ -43,13 +43,12 @@ const TypeOfBirth = {
 } as const
 
 const AttendantAtBirth = {
-  PHYSICIAN: 'PHYSICIAN',
+  DOCTOR: 'DOCTOR',
   NURSE: 'NURSE',
   MIDWIFE: 'MIDWIFE',
-  OTHER_PARAMEDICAL_PERSONNEL: 'OTHER_PARAMEDICAL_PERSONNEL',
-  LAYPERSON: 'LAYPERSON',
-  TRADITIONAL_BIRTH_ATTENDANT: 'TRADITIONAL_BIRTH_ATTENDANT',
-  NONE: 'NONE'
+  OTHER_HEALTH_CARE_PRODESSIONAL: 'OTHER_PARAMEDICAL_PERSONNEL',
+  NONE: 'NONE',
+  OTHER: 'OTHER'
 } as const
 
 export const PlaceOfBirth = {
@@ -95,10 +94,10 @@ const typeOfBirthMessageDescriptors = {
 } satisfies Record<keyof typeof TypeOfBirth, TranslationConfig>
 
 const attendantAtBirthMessageDescriptors = {
-  PHYSICIAN: {
-    defaultMessage: 'Physician',
-    description: 'Label for physician attendant',
-    id: 'v2.form.field.label.attendantAtBirthPhysician'
+  DOCTOR: {
+    defaultMessage: 'Doctor',
+    description: 'Label for doctor attendant',
+    id: 'v2.form.field.label.attendantAtBirthDoctor'
   },
   NURSE: {
     defaultMessage: 'Nurse',
@@ -110,25 +109,20 @@ const attendantAtBirthMessageDescriptors = {
     description: 'Label for midwife attendant',
     id: 'v2.form.field.label.attendantAtBirthMidwife'
   },
-  OTHER_PARAMEDICAL_PERSONNEL: {
-    defaultMessage: 'Other paramedical personnel',
-    description: 'Label for other paramedical personnel',
-    id: 'v2.form.field.label.attendantAtBirthOtherParamedicalPersonnel'
-  },
-  LAYPERSON: {
-    defaultMessage: 'Layperson',
-    description: 'Label for layperson attendant',
-    id: 'v2.form.field.label.attendantAtBirthLayperson'
-  },
-  TRADITIONAL_BIRTH_ATTENDANT: {
-    defaultMessage: 'Traditional birth attendant',
-    description: 'Label for traditional birth attendant',
-    id: 'v2.form.field.label.attendantAtBirthTraditionalBirthAttendant'
+  OTHER_HEALTH_CARE_PRODESSIONAL: {
+    defaultMessage: 'Other health care professional',
+    description: 'Label for Other health care professional',
+    id: 'v2.form.field.label.attendantAtBirthOtherHealthCareProfessional'
   },
   NONE: {
     defaultMessage: 'None',
     description: 'Label for no attendant',
     id: 'v2.form.field.label.attendantAtBirthNone'
+  },
+  OTHER: {
+    defaultMessage: 'Other',
+    description: 'Label for other',
+    id: 'v2.form.field.label.attendantAtBirthOther'
   }
 } satisfies Record<keyof typeof AttendantAtBirth, TranslationConfig>
 

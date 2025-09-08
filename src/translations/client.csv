@@ -2984,10 +2984,13 @@ v2.file.upload.fileType.error,Error message when the selected file type is not s
 v2.form.birth.child.title,Form section title for Child,Child's details
 v2.form.field.label.No,Label for form field radio option No,No
 v2.form.field.label.Yes,Label for form field radio option Yes,Yes
+v2.form.field.label.attendantAtBirthDoctor,Label for doctor attendant,Doctor
 v2.form.field.label.attendantAtBirthLayperson,Label for layperson attendant,Layperson
 v2.form.field.label.attendantAtBirthMidwife,Label for midwife attendant,Midwife
 v2.form.field.label.attendantAtBirthNone,Label for no attendant,None
 v2.form.field.label.attendantAtBirthNurse,Label for nurse attendant,Nurse
+v2.form.field.label.attendantAtBirthOther,Label for other,Other
+v2.form.field.label.attendantAtBirthOtherHealthCareProfessional,Label for other health care professional,Other health care professional
 v2.form.field.label.attendantAtBirthOtherParamedicalPersonnel,Label for other paramedical personnel,Other paramedical personnel
 v2.form.field.label.attendantAtBirthPhysician,Label for physician attendant,Physician
 v2.form.field.label.attendantAtBirthTraditionalBirthAttendant,Label for traditional birth attendant,Traditional birth attendant
