@@ -36,6 +36,7 @@ export const requireMotherDetails = or(
   field('mother.detailsNotAvailable').isFalsy(),
   field('informant.relation').isEqualTo(InformantType.MOTHER)
 )
+const PHONE_NUMBER_REGEX = '^0(7|9)[0-9]{8}$'
 
 export const mother = defineFormPage({
   id: 'mother',
@@ -402,17 +403,16 @@ export const mother = defineFormPage({
         }
       ]
     },
-
     {
-      id: 'mother.educationalAttainment',
-      type: FieldType.SELECT,
+      id: 'mother.phoneNo',
+      type: FieldType.PHONE,
       required: false,
+      secured: true,
       label: {
-        defaultMessage: 'Level of education',
+        defaultMessage: 'Phone number',
         description: 'This is the label for the field',
-        id: 'v2.event.birth.action.declare.form.section.person.field.educationalAttainment.label'
+        id: 'v2.event.birth.action.declare.form.section.mother.field.phoneNo.label'
       },
-      options: educationalAttainmentOptions,
       conditionals: [
         {
           type: ConditionalType.SHOW,
@@ -421,7 +421,53 @@ export const mother = defineFormPage({
             requireMotherDetails
           )
         }
-      ]
+      ],
+      validation: [
+        {
+          message: {
+            defaultMessage:
+              'Must be a valid 10 digit number that starts with 0(7|9)',
+            description:
+              'The error message that appears on phone numbers where the first two characters must be 07 or 09, and length must be 10',
+            id: 'v2.event.birth.action.declare.form.section.informant.field.phoneNo.error'
+          },
+          validator: or(
+            field('informant.phoneNo').matches(PHONE_NUMBER_REGEX),
+            field('informant.phoneNo').isFalsy()
+          )
+        }
+      ],
+      parent: field('informant.relation')
+    },
+    {
+      id: 'mother.email',
+      type: FieldType.EMAIL,
+      required: false,
+      secured: true,
+      label: {
+        defaultMessage: 'Email',
+        description: 'This is the label for the field',
+        id: 'v2.event.birth.action.declare.form.section.mother.field.email.label'
+      },
+      configuration: {
+        maxLength: 255
+      },
+      conditionals: [
+        {
+          type: ConditionalType.SHOW,
+          conditional: and(
+            field('mother.detailsNotAvailable').isEqualTo(false),
+            requireMotherDetails
+          )
+        }
+      ],
+      parent: field('informant.relation')
+    },
+    {
+      id: 'mother.occupationDivider',
+      type: FieldType.DIVIDER,
+      label: emptyMessage,
+      parent: field('informant.relation')
     },
     {
       id: 'mother.occupation',
@@ -441,28 +487,6 @@ export const mother = defineFormPage({
           )
         }
       ]
-    },
-    {
-      id: 'mother.previousBirths',
-      type: FieldType.NUMBER,
-      required: false,
-      label: {
-        defaultMessage: 'No. of previous births',
-        description: 'This is the label for the field',
-        id: 'v2.event.birth.action.declare.form.section.mother.field.previousBirths.label'
-      },
-      conditionals: [
-        {
-          type: ConditionalType.SHOW,
-          conditional: and(
-            field('mother.detailsNotAvailable').isEqualTo(false),
-            requireMotherDetails
-          )
-        }
-      ],
-      configuration: {
-        min: 0
-      }
     }
   ]
 })
