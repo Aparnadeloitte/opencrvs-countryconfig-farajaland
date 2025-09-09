@@ -26,16 +26,6 @@ export const BIRTH_DECLARATION_REVIEW = {
   },
   fields: [
     {
-      id: 'review.comment',
-      type: FieldType.TEXTAREA,
-      label: {
-        defaultMessage: 'Comment',
-        id: 'v2.event.birth.action.declare.form.review.comment.label',
-        description: 'Label for the comment field in the review section'
-      },
-      required: true
-    },
-    {
       type: FieldType.SIGNATURE,
       id: 'review.signature',
       required: true,
